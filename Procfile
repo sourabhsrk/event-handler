@@ -1,1 +1,1 @@
-web : nodemon data.js
+web : node data.js
