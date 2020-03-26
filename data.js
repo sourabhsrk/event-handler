@@ -2,16 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql');
 const moment = require('moment');
-
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 const SELECT_ALL_EVENTS = 'SELECT * FROM event_table';
 
 const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: 'root',
-	database: 'event',
+	host: 'remotemysql.com',
+	user: 'nobE49ZzpS',
+	password: '7dEwoKwr6J',
+	database: 'nobE49ZzpS',
 	timezone: 'Z'
 });
 
@@ -119,7 +119,7 @@ app.get('/events/event-rgs', (req,res) => {
 	});
 });
 
-const PORT = process.env.PORT || 4000
+
 app.listen(PORT, () => {
 	console.log(`event server listening on port 4000`)
 });
