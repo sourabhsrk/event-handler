@@ -8,10 +8,10 @@ const app = express();
 const SELECT_ALL_EVENTS = 'SELECT * FROM event_table';
 
 const connection = mysql.createConnection({
-	host: 'remotemysql.com',
-	user: 'nobE49ZzpS',
-	password: '7dEwoKwr6J',
-	database: 'nobE49ZzpS',
+	host: 'localhost',
+	user: 'root',
+	password: 'root',
+	database: 'event',
 	timezone: 'Z'
 });
 
